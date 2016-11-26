@@ -122,7 +122,6 @@ class ImageDocument(BaseDocument):
         self.document = self.encode_image(image)
 
     def encode_image(self, obj):
-        obj.unloadDetails()
         if obj.isPixelsLoaded() and obj.sizeOfPixels() > 0:
             pixels = obj.getPrimaryPixels()
             pixels.unloadDetails()
