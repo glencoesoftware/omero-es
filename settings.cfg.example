@@ -1,0 +1,55 @@
+# enable/disable debug mode
+#DEBUG = False
+
+# enable/disable testing mode
+#TESTING = False
+
+# the secret key
+# create a new secret key by running:
+#   uuidgen
+#SECRET_KEY = 'super-secret'
+
+# OMERO server hostname
+#OMERO_SERVER = 'localhost'
+
+# OMERO server hostname
+#OMERO_PORT = 4064
+
+# OMERO.web session engine ('database' or 'redis')
+#
+# 	* 'database' uses SQLALCHEMY_DATABASE_URI for configuration
+#   * 'redis' uses REDIS_URL for configuration
+#
+#OMERO_WEB_SESSION_ENGINE = 'database'
+
+# OMERO.web cache key prefix
+# https://docs.djangoproject.com/en/1.8/topics/cache/#cache-key-prefixing
+#OMERO_WEB_CACHE_KEY_PREFIX = ''
+
+# OMERO.web cache version
+# https://docs.djangoproject.com/en/1.8/topics/cache/#cache-versioning
+#OMERO_WEB_CACHE_VERSION = 1
+
+# enable/disable CSRF checking
+#WTF_CSRF_ENABLED = True
+
+# SQLAlchemy database URI
+#SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@server:port/name'
+
+# Redis database URI
+#REDIS_URL = 'redis://localhost:6379/1'
+
+# Elasticsearch base URI
+#ELASTICSEARCH_URI = 'http://localhost:9200'
+
+# Elasticsearch index to search against
+#ELASTICSEARCH_INDEX = 'omero'
+
+# Log file
+#LOG_FILE = None
+
+# Log format
+#LOG_FORMAT = '%(asctime)s %(levelname)-7s [%(name)16s] %(message)s'
+
+# Log level
+#LOG_LEVEL = 10

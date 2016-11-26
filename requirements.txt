@@ -1,0 +1,10 @@
+egenix-mx-base>=3.2.6
+elasticsearch>=5.0.0,<6.0.0
+Django<1.9
+Flask==0.11.1
+Flask-Script==2.0.5
+Flask-SQLAlchemy==2.1
+Flask-RESTful==0.3.5
+Flask-And-Redis==0.7
+git+https://github.com/chris-allan/omero-marshal.git@omero-es
+psycopg2==2.6.2

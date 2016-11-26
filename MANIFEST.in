@@ -1,0 +1,4 @@
+include README
+include settings.cfg.example
+include requirements.txt
+include requirements-dev.txt
