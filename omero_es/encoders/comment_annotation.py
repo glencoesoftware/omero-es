@@ -18,7 +18,7 @@ from omero.model import CommentAnnotationI
 class InvariantCommentAnnotationEncoder(InvariantTextAnnotationEncoder):
 
     def encode(self, obj):
-        v = super(InvariantTextAnnotationEncoder, self).encode(obj)
+        v = super(InvariantCommentAnnotationEncoder, self).encode(obj)
         return v
 
 omero_marshal.ENCODERS[CommentAnnotationI] = \
