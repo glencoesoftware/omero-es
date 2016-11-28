@@ -232,7 +232,7 @@ def _load_searching():
         'searchGroup', help='group to filter search by'
     )
     parser.add_argument(
-        'ownedBy', help='owner to filter search by'
+        'ownedBy', type=int, help='owner to filter search by'
     )
     parser.add_argument(
         'useAcquisitionDate', type=toBoolean,
