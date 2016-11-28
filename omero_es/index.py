@@ -31,6 +31,10 @@ QUERY_ALL_PROJECT_IDS = """SELECT project.id FROM Project AS project"""
 QUERY_ALL_SCREEN_IDS = """SELECT screen.id FROM Screen AS screen"""
 
 QUERY_PROJECT = """SELECT project FROM Project AS project
+JOIN FETCH project.details.creationEvent as c_event
+JOIN FETCH c_event.type
+JOIN FETCH project.details.updateEvent as u_event
+JOIN FETCH u_event.type
 JOIN FETCH project.details.owner
 JOIN FETCH project.details.group AS eg
 JOIN FETCH eg.groupExperimenterMap AS eg_e_map
@@ -45,6 +49,10 @@ WHERE project.id = :id
 """
 
 QUERY_PLATES = """SELECT plate FROM Plate AS plate
+JOIN FETCH plate.details.creationEvent as c_event
+JOIN FETCH c_event.type
+JOIN FETCH plate.details.updateEvent as u_event
+JOIN FETCH u_event.type
 JOIN FETCH plate.details.owner
 JOIN FETCH plate.details.group AS eg
 JOIN FETCH eg.groupExperimenterMap AS eg_e_map

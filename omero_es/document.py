@@ -46,6 +46,10 @@ GROUP BY dataset.id
 QUERY_IMAGES = """SELECT image FROM Image AS image
 LEFT OUTER JOIN FETCH image.annotationLinks AS i_a_link
 LEFT OUTER JOIN FETCH i_a_link.child
+JOIN FETCH image.details.creationEvent as c_event
+JOIN FETCH c_event.type
+JOIN FETCH image.details.updateEvent as u_event
+JOIN FETCH u_event.type
 JOIN FETCH image.pixels AS pixels
 JOIN FETCH pixels.channels AS channel
 JOIN FETCH channel.logicalChannel
@@ -64,6 +68,10 @@ LEFT OUTER JOIN FETCH i_a_link.child
 LEFT OUTER JOIN FETCH image.pixels AS pixels
 LEFT OUTER JOIN FETCH pixels.channels AS channel
 LEFT OUTER JOIN FETCH channel.logicalChannel
+JOIN FETCH well.details.creationEvent as c_event
+JOIN FETCH c_event.type
+JOIN FETCH well.details.updateEvent as u_event
+JOIN FETCH u_event.type
 JOIN well.plate AS plate
 WHERE plate.id = :id
 """
@@ -122,6 +130,12 @@ class ImageDocument(BaseDocument):
         self.document = self.encode_image(image)
 
     def encode_image(self, obj):
+        obj.details.owner.unloadDetails()
+        obj.details.group.unloadDetails()
+        obj.details.creationEvent.unloadDetails()
+        obj.details.creationEvent.type.unloadDetails()
+        obj.details.updateEvent.unloadDetails()
+        obj.details.updateEvent.type.unloadDetails()
         if obj.isPixelsLoaded() and obj.sizeOfPixels() > 0:
             pixels = obj.getPrimaryPixels()
             pixels.unloadDetails()
@@ -146,6 +160,10 @@ class ProjectDocument(BaseDocument):
     def encode_project(self, obj):
         obj.details.owner.unloadDetails()
         obj.details.group.unloadDetails()
+        obj.details.creationEvent.unloadDetails()
+        obj.details.creationEvent.type.unloadDetails()
+        obj.details.updateEvent.unloadDetails()
+        obj.details.updateEvent.type.unloadDetails()
         for _map in obj.details.group.copyGroupExperimenterMap():
             _map.child.unloadDetails()
         if obj.isDatasetLinksLoaded() and obj.sizeOfDatasetLinks() > 0:
@@ -242,6 +260,10 @@ class PlateDocument(BaseDocument):
     def encode_plate(self, obj):
         obj.details.owner.unloadDetails()
         obj.details.group.unloadDetails()
+        obj.details.creationEvent.unloadDetails()
+        obj.details.creationEvent.type.unloadDetails()
+        obj.details.updateEvent.unloadDetails()
+        obj.details.updateEvent.type.unloadDetails()
         for _map in obj.details.group.copyGroupExperimenterMap():
             _map.child.unloadDetails()
         if obj.isScreenLinksLoaded() and obj.sizeOfScreenLinks() > 0:
