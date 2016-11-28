@@ -17,7 +17,7 @@ Class, Encoder = omero_marshal.encode.encoders.double_annotation.encoder
 class InvariantDoubleAnnotationEncoder(Encoder):
 
     def encode(self, obj):
-        v = super(InvariantDoubleAnnotationEncoder, self).encode(obj)
+        v = super(Encoder, self).encode(obj)
         self.set_if_not_none(v, 'DoubleValue', obj.doubleValue)
         return v
 

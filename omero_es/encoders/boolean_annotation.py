@@ -13,10 +13,11 @@ import omero_marshal
 
 Class, Encoder = omero_marshal.encode.encoders.boolean_annotation.encoder
 
+
 class InvariantBooleanAnnotationEncoder(Encoder):
 
     def encode(self, obj):
-        v = super(InvariantBooleanAnnotationEncoder, self).encode(obj)
+        v = super(Encoder, self).encode(obj)
         self.set_if_not_none(v, 'BoolValue', obj.boolValue)
         return v
 

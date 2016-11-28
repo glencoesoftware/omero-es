@@ -17,7 +17,7 @@ Class, Encoder = omero_marshal.encode.encoders.long_annotation.encoder
 class InvariantLongAnnotationEncoder(Encoder):
 
     def encode(self, obj):
-        v = super(InvariantLongAnnotationEncoder, self).encode(obj)
+        v = super(Encoder, self).encode(obj)
         self.set_if_not_none(v, 'LongValue', obj.longValue)
         return v
 

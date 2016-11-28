@@ -18,9 +18,8 @@ from omero.model import TagAnnotationI
 class InvariantTagAnnotationEncoder(InvariantTextAnnotationEncoder):
 
     def encode(self, obj):
-        v = super(InvariantTagAnnotationEncoder, self).encode(obj)
+        v = super(InvariantTextAnnotationEncoder, self).encode(obj)
         return v
 
 omero_marshal.ENCODERS[TagAnnotationI] = \
-	InvariantTagAnnotationEncoder(omero_marshal._ctx)
-
+    InvariantTagAnnotationEncoder(omero_marshal._ctx)

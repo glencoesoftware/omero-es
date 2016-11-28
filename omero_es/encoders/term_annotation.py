@@ -17,7 +17,7 @@ Class, Encoder = omero_marshal.encode.encoders.term_annotation.encoder
 class InvariantTagAnnotationEncoder(Encoder):
 
     def encode(self, obj):
-        v = super(InvariantTagAnnotationEncoder, self).encode(obj)
+        v = super(Encoder, self).encode(obj)
         self.set_if_not_none(v, 'TermValue', obj.termValue)
         return v
 

@@ -17,7 +17,7 @@ Class, Encoder = omero_marshal.encode.encoders.map_annotation.encoder
 class InvariantMapAnnotationEncoder(Encoder):
 
     def encode(self, obj):
-        v = super(InvariantMapAnnotationEncoder, self).encode(obj)
+        v = super(Encoder, self).encode(obj)
         if obj.mapValue is None:
             return None
         self.set_if_not_none(

@@ -17,7 +17,7 @@ Class, Encoder = omero_marshal.encode.encoders.timestamp_annotation.encoder
 class InvariantTimestampAnnotationEncoder(Encoder):
 
     def encode(self, obj):
-        v = super(InvariantTimestampAnnotationEncoder, self).encode(obj)
+        v = super(Encoder, self).encode(obj)
         self.set_if_not_none(v, 'Value', obj.timeValue)
         return v
 

@@ -17,7 +17,7 @@ Class, Encoder = omero_marshal.encode.encoders.text_annotation.encoder
 class InvariantTextAnnotationEncoder(Encoder):
 
     def encode(self, obj):
-        v = super(InvariantTextAnnotationEncoder, self).encode(obj)
+        v = super(Encoder, self).encode(obj)
         self.set_if_not_none(v, 'TextValue', obj.textValue)
         return v
 

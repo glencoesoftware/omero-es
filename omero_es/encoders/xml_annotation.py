@@ -18,8 +18,8 @@ from omero.model import XmlAnnotationI
 class InvariantXmlAnnotationEncoder(InvariantTextAnnotationEncoder):
 
     def encode(self, obj):
-        v = super(InvariantXmlAnnotationEncoder, self).encode(obj)
+        v = super(InvariantTextAnnotationEncoder, self).encode(obj)
         return v
 
 omero_marshal.ENCODERS[XmlAnnotationI] = \
-	InvariantXmlAnnotationEncoder(omero_marshal._ctx)
+    InvariantXmlAnnotationEncoder(omero_marshal._ctx)
