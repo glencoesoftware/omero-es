@@ -75,7 +75,7 @@ def security_filter(event_context):
                     },
                     {
                         'term': {
-                            'omero:details.permissions.iGroupRead': True
+                            'omero:details.permissions.isGroupRead': True
                         }
                     },
                     {
