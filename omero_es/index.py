@@ -130,7 +130,7 @@ def image_document_index_actions(project_document, index):
         yield {
             '_index': index,
             '_type': 'image',
-            #'_parent': project_document.project.id.val,
+            '_parent': project_document.project.id.val,
             '_id': _id,
             '_source': json.dumps(image_document.document)
         }
@@ -203,7 +203,7 @@ def well_document_index_actions(plate_document, index):
         yield {
             '_index': index,
             '_type': 'well',
-            #'_parent': plate_document.plate.id.val,
+            '_parent': plate_document.plate.id.val,
             '_id': well_document.well.id.val,
             '_source': json.dumps(well_document.document)
         }
