@@ -254,8 +254,8 @@ def _load_searching():
     # If we're an administrator we don't need a security filter.  If we're not
     # we do.
     _filter = dict()
-    #if not event_context.isAdmin:
-    #    _filter = security_filter(event_context)
+    if not event_context.isAdmin:
+        _filter = security_filter(event_context)
     es = Elasticsearch(current_app.config['ELASTICSEARCH_URI'])
     # Prepare a request body for an Elasticsearch "Request Body Search":
     #
