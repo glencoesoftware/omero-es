@@ -2,6 +2,9 @@
   "_parent" : {
     "type" : "plate"
   },
+  "_routing" : {
+    "required" : true
+  },
   "properties" : {
     "@id" : {
       "type" : "long"
@@ -460,7 +463,7 @@
         }
       }
     },
-        "omero:details" : {
+    "omero:details" : {
       "properties" : {
         "@type" : {
           "type" : "text",
@@ -498,6 +501,60 @@
                       "ignore_above" : 256
                     }
                   }
+                },
+                "Email" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "FirstName" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Institution" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "LastName" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "MiddleName" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "UserName" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
                 }
               }
             },
@@ -521,6 +578,139 @@
                     "keyword" : {
                       "type" : "keyword",
                       "ignore_above" : 256
+                    }
+                  }
+                },
+                "Experimenters" : {
+                  "type" : "nested",
+                  "properties" : {
+                    "@id" : {
+                      "type" : "long"
+                    },
+                    "@type" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Email" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "FirstName" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "LastName" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "MiddleName" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "UserName" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "omero:details" : {
+                      "properties" : {
+                        "@type" : {
+                          "type" : "text",
+                          "fields" : {
+                            "keyword" : {
+                              "type" : "keyword",
+                              "ignore_above" : 256
+                            }
+                          }
+                        },
+                        "permissions" : {
+                          "properties" : {
+                            "@type" : {
+                              "type" : "text",
+                              "fields" : {
+                                "keyword" : {
+                                  "type" : "keyword",
+                                  "ignore_above" : 256
+                                }
+                              }
+                            },
+                            "canAnnotate" : {
+                              "type" : "boolean"
+                            },
+                            "canDelete" : {
+                              "type" : "boolean"
+                            },
+                            "canEdit" : {
+                              "type" : "boolean"
+                            },
+                            "canLink" : {
+                              "type" : "boolean"
+                            },
+                            "isGroupAnnotate" : {
+                              "type" : "boolean"
+                            },
+                            "isGroupRead" : {
+                              "type" : "boolean"
+                            },
+                            "isGroupWrite" : {
+                              "type" : "boolean"
+                            },
+                            "isUserRead" : {
+                              "type" : "boolean"
+                            },
+                            "isUserWrite" : {
+                              "type" : "boolean"
+                            },
+                            "isWorldRead" : {
+                              "type" : "boolean"
+                            },
+                            "isWorldWrite" : {
+                              "type" : "boolean"
+                            },
+                            "perm" : {
+                              "type" : "text",
+                              "fields" : {
+                                "keyword" : {
+                                  "type" : "keyword",
+                                  "ignore_above" : 256
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "omero:owner" : {
+                      "type" : "boolean"
                     }
                   }
                 },
@@ -658,6 +848,74 @@
                     }
                   }
                 },
+                "omero:details" : {
+                  "properties" : {
+                    "@type" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "permissions" : {
+                      "properties" : {
+                        "@type" : {
+                          "type" : "text",
+                          "fields" : {
+                            "keyword" : {
+                              "type" : "keyword",
+                              "ignore_above" : 256
+                            }
+                          }
+                        },
+                        "canAnnotate" : {
+                          "type" : "boolean"
+                        },
+                        "canDelete" : {
+                          "type" : "boolean"
+                        },
+                        "canEdit" : {
+                          "type" : "boolean"
+                        },
+                        "canLink" : {
+                          "type" : "boolean"
+                        },
+                        "isGroupAnnotate" : {
+                          "type" : "boolean"
+                        },
+                        "isGroupRead" : {
+                          "type" : "boolean"
+                        },
+                        "isGroupWrite" : {
+                          "type" : "boolean"
+                        },
+                        "isUserRead" : {
+                          "type" : "boolean"
+                        },
+                        "isUserWrite" : {
+                          "type" : "boolean"
+                        },
+                        "isWorldRead" : {
+                          "type" : "boolean"
+                        },
+                        "isWorldWrite" : {
+                          "type" : "boolean"
+                        },
+                        "perm" : {
+                          "type" : "text",
+                          "fields" : {
+                            "keyword" : {
+                              "type" : "keyword",
+                              "ignore_above" : 256
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "omero:owner" : {
                   "type" : "boolean"
                 }
@@ -680,6 +938,60 @@
               "type" : "long"
             },
             "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Email" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "FirstName" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Institution" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "LastName" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "MiddleName" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "UserName" : {
               "type" : "text",
               "fields" : {
                 "keyword" : {
@@ -772,6 +1084,60 @@
                       "ignore_above" : 256
                     }
                   }
+                },
+                "Email" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "FirstName" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Institution" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "LastName" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "MiddleName" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "UserName" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
                 }
               }
             },
@@ -795,6 +1161,139 @@
                     "keyword" : {
                       "type" : "keyword",
                       "ignore_above" : 256
+                    }
+                  }
+                },
+                "Experimenters" : {
+                  "type" : "nested",
+                  "properties" : {
+                    "@id" : {
+                      "type" : "long"
+                    },
+                    "@type" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Email" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "FirstName" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "LastName" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "MiddleName" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "UserName" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "omero:details" : {
+                      "properties" : {
+                        "@type" : {
+                          "type" : "text",
+                          "fields" : {
+                            "keyword" : {
+                              "type" : "keyword",
+                              "ignore_above" : 256
+                            }
+                          }
+                        },
+                        "permissions" : {
+                          "properties" : {
+                            "@type" : {
+                              "type" : "text",
+                              "fields" : {
+                                "keyword" : {
+                                  "type" : "keyword",
+                                  "ignore_above" : 256
+                                }
+                              }
+                            },
+                            "canAnnotate" : {
+                              "type" : "boolean"
+                            },
+                            "canDelete" : {
+                              "type" : "boolean"
+                            },
+                            "canEdit" : {
+                              "type" : "boolean"
+                            },
+                            "canLink" : {
+                              "type" : "boolean"
+                            },
+                            "isGroupAnnotate" : {
+                              "type" : "boolean"
+                            },
+                            "isGroupRead" : {
+                              "type" : "boolean"
+                            },
+                            "isGroupWrite" : {
+                              "type" : "boolean"
+                            },
+                            "isUserRead" : {
+                              "type" : "boolean"
+                            },
+                            "isUserWrite" : {
+                              "type" : "boolean"
+                            },
+                            "isWorldRead" : {
+                              "type" : "boolean"
+                            },
+                            "isWorldWrite" : {
+                              "type" : "boolean"
+                            },
+                            "perm" : {
+                              "type" : "text",
+                              "fields" : {
+                                "keyword" : {
+                                  "type" : "keyword",
+                                  "ignore_above" : 256
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "omero:owner" : {
+                      "type" : "boolean"
                     }
                   }
                 },
