@@ -331,7 +331,12 @@ class WellDocument(ImageDocument):
         self.document = self.encode_well(well)
 
     def encode_well(self, obj):
-        obj.unloadDetails()
+        obj.details.owner.unloadDetails()
+        obj.details.group.unloadDetails()
+        obj.details.creationEvent.unloadDetails()
+        obj.details.creationEvent.type.unloadDetails()
+        obj.details.updateEvent.unloadDetails()
+        obj.details.updateEvent.type.unloadDetails()
         if obj.isWellSamplesLoaded() and obj.sizeOfWellSamples() > 0:
             for wellsample in obj.copyWellSamples():
                 wellsample.unloadDetails()
