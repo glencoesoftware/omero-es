@@ -110,9 +110,9 @@
                     </td>
                     <td class="date">
                         <!-- only show Acquisition dates for 'image'. NB image.getDate() returns AquisitionDate-->
-                        {% if objectType == 'image' %}{{ source.getDate }}{% endif %}
+                        {% if objectType == 'image' %}{{ source.AcquisitionDate }}{% endif %}
                     </td>
-                    <td class="date">{{ source['omero:details'].creationEvent }}</td>
+                    <td class="date">{{ source['omero:details'].creationEvent.time }}</td>
                     <td class="group">{{ source['omero:details'].group.Name }}</td>
                     <td><a href="/webclient/?show={{ objectType }}-{{ source['@id'] }}" title="Show in hierarchy view">
                         Browse
