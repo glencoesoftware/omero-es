@@ -50,6 +50,10 @@ JOIN FETCH image.details.creationEvent as c_event
 JOIN FETCH c_event.type
 JOIN FETCH image.details.updateEvent as u_event
 JOIN FETCH u_event.type
+JOIN FETCH image.details.owner
+JOIN FETCH image.details.group AS eg
+JOIN FETCH eg.groupExperimenterMap AS eg_e_map
+JOIN FETCH eg_e_map.child
 JOIN FETCH image.pixels AS pixels
 JOIN FETCH pixels.channels AS channel
 JOIN FETCH channel.logicalChannel
@@ -72,6 +76,10 @@ JOIN FETCH well.details.creationEvent as c_event
 JOIN FETCH c_event.type
 JOIN FETCH well.details.updateEvent as u_event
 JOIN FETCH u_event.type
+JOIN FETCH well.details.owner
+JOIN FETCH well.details.group AS eg
+JOIN FETCH eg.groupExperimenterMap AS eg_e_map
+JOIN FETCH eg_e_map.child
 JOIN well.plate AS plate
 WHERE plate.id = :id
 """
