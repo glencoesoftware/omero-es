@@ -69,9 +69,9 @@
         </div>
         {% endif %}
 
-        {% if result['hits']['total'] > 0 %}
+        {% if result.hits.total > 0 %}
         <table id="dataTable" class="tablesorter"
-                data-result-count="{{ result['hits']['total'] }}"
+                data-result-count="{{ result.hits.total }}"
                 {% if hasMoreResults %}data-more-results="true"{% endif %}>
             <thead> 
                 <tr> 
@@ -85,9 +85,9 @@
             </thead>
             <tbody>
             <!-- NB: E.g. "#project-123 td.desc a" etc is used to update names if edited in right-panel 'editinplace.js' -->
-            {% for hit in result['hits']['hits'] %}
+            {% for hit in result.hits.hits %}
                 {% with %}
-                {% set source = hit['_source'] %}
+                {% set source = hit._source %}
                 {% set objectType = source['@type'].split('#')[1].lower() %}
                 <tr id="{{ objectType }}-{{ source['@id'] }}" class="{{ hit.permsCss }}">
                     <td class="image">
