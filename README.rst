@@ -49,11 +49,15 @@ always remove the entire index by executing::
     curl -X DELETE http://localhost:9200/omero
 
 The document mappings for Project-Dataset, Image, Plate and Well can be
-applied (the order is important) as follows::
+applied (the order is important; child mappings have to be created before
+parent mappings) as follows::
 
     # Assuming the index has not yet been created
     curl -X PUT http://localhost:9200/omero
-    ...
+    curl -X PUT -d '@mapping_image.json' http://localhost:9200/omero/_mapping/image
+    curl -X PUT -d '@mapping_well.json' http://localhost:9200/omero/_mapping/well
+    curl -X PUT -d '@mapping_project.json' http://localhost:9200/omero/_mapping/project
+    curl -X PUT -d '@mapping_plate.json' http://localhost:9200/omero/_mapping/plate
 
 Manual Indexing
 ===============
