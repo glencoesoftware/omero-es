@@ -105,7 +105,7 @@
 
                     </td>
                     <td class="desc">
-                        <span style="color:red">Score: {{ hit._score }}</span>
+                        <span style="color:red">Score: {{ hit._score }} | Row: {{ loop.index }}</span>
                         <a>{{ source.Name|truncate(64, True) }}</a>
                     </td>
                     <td class="date">
