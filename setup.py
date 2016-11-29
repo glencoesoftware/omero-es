@@ -51,7 +51,7 @@ def read(fname):
 setup(name='omero-es',
       version=getVersion(),
       description='OMERO Elasticsearch Utilities',
-      long_description=read('README'),
+      long_description=read('README.rst'),
       classifiers=[],  # Get strings from
                        # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       keywords='',
