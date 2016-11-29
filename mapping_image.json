@@ -1,0 +1,723 @@
+{
+  "_parent" : {
+    "type" : "project"
+  },
+  "properties" : {
+    "@id" : {
+      "type" : "long"
+    },
+    "@type" : {
+      "type" : "text",
+      "fields" : {
+        "keyword" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        }
+      }
+    },
+    "AcquisitionDate" : {
+      "type" : "date",
+      "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+    },
+    "Annotations" : {
+      "type" : "nested",
+      "properties" : {
+        "@id" : {
+          "type" : "long"
+        },
+        "@type" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "Description" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "LongValue" : {
+          "type" : "long"
+        },
+        "MapValue" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "Namespace" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "TextValue" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "Value" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+      }
+    },
+    "Description" : {
+      "type" : "text",
+      "fields" : {
+        "keyword" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        }
+      }
+    },
+    "Name" : {
+      "type" : "text",
+      "fields" : {
+        "keyword" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        }
+      }
+    },
+    "Pixels" : {
+      "properties" : {
+        "@id" : {
+          "type" : "long"
+        },
+        "@type" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "Channels" : {
+          "type" : "nested",
+          "properties" : {
+            "@id" : {
+              "type" : "long"
+            },
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Alpha" : {
+              "type" : "long"
+            },
+            "Blue" : {
+              "type" : "long"
+            },
+            "EmissionWavelength" : {
+              "properties" : {
+                "@type" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Symbol" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Unit" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Value" : {
+                  "type" : "float"
+                }
+              }
+            },
+            "ExcitationWavelength" : {
+              "properties" : {
+                "@type" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Symbol" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Unit" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Value" : {
+                  "type" : "float"
+                }
+              }
+            },
+            "Fluor" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Green" : {
+              "type" : "long"
+            },
+            "NDFilter" : {
+              "type" : "float"
+            },
+            "Name" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Red" : {
+              "type" : "long"
+            },
+            "SamplesPerPixel" : {
+              "type" : "long"
+            },
+            "omero:LogicalChannelId" : {
+              "type" : "long"
+            }
+          }
+        },
+        "PhysicalSizeX" : {
+          "properties" : {
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Symbol" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Unit" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Value" : {
+              "type" : "float"
+            }
+          }
+        },
+        "PhysicalSizeY" : {
+          "properties" : {
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Symbol" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Unit" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Value" : {
+              "type" : "float"
+            }
+          }
+        },
+        "PhysicalSizeZ" : {
+          "properties" : {
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Symbol" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Unit" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Value" : {
+              "type" : "float"
+            }
+          }
+        },
+        "SignificantBits" : {
+          "type" : "long"
+        },
+        "SizeC" : {
+          "type" : "long"
+        },
+        "SizeT" : {
+          "type" : "long"
+        },
+        "SizeX" : {
+          "type" : "long"
+        },
+        "SizeY" : {
+          "type" : "long"
+        },
+        "SizeZ" : {
+          "type" : "long"
+        },
+        "TimeIncrement" : {
+          "properties" : {
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Symbol" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Unit" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Value" : {
+              "type" : "float"
+            }
+          }
+        },
+        "omero:sha1" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+      }
+    },
+    "omero:archived" : {
+      "type" : "boolean"
+    },
+    "omero:details" : {
+      "properties" : {
+        "@type" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "creationEvent" : {
+          "properties" : {
+            "@id" : {
+              "type" : "long"
+            },
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "experimenter" : {
+              "properties" : {
+                "@id" : {
+                  "type" : "long"
+                },
+                "@type" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                }
+              }
+            },
+            "experimenterGroup" : {
+              "properties" : {
+                "@id" : {
+                  "type" : "long"
+                },
+                "@type" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Description" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Name" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                }
+              }
+            },
+            "time" : {
+              "type" : "date",
+              "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+            },
+            "type" : {
+              "properties" : {
+                "@id" : {
+                  "type" : "long"
+                },
+                "@type" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "value" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "group" : {
+          "properties" : {
+            "@id" : {
+              "type" : "long"
+            },
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Description" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Name" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            }
+          }
+        },
+        "owner" : {
+          "properties" : {
+            "@id" : {
+              "type" : "long"
+            },
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            }
+          }
+        },
+        "permissions" : {
+          "properties" : {
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "canAnnotate" : {
+              "type" : "boolean"
+            },
+            "canDelete" : {
+              "type" : "boolean"
+            },
+            "canEdit" : {
+              "type" : "boolean"
+            },
+            "canLink" : {
+              "type" : "boolean"
+            },
+            "isGroupAnnotate" : {
+              "type" : "boolean"
+            },
+            "isGroupRead" : {
+              "type" : "boolean"
+            },
+            "isGroupWrite" : {
+              "type" : "boolean"
+            },
+            "isUserRead" : {
+              "type" : "boolean"
+            },
+            "isUserWrite" : {
+              "type" : "boolean"
+            },
+            "isWorldRead" : {
+              "type" : "boolean"
+            },
+            "isWorldWrite" : {
+              "type" : "boolean"
+            },
+            "perm" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            }
+          }
+        },
+        "updateEvent" : {
+          "properties" : {
+            "@id" : {
+              "type" : "long"
+            },
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "experimenter" : {
+              "properties" : {
+                "@id" : {
+                  "type" : "long"
+                },
+                "@type" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                }
+              }
+            },
+            "experimenterGroup" : {
+              "properties" : {
+                "@id" : {
+                  "type" : "long"
+                },
+                "@type" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Description" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Name" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                }
+              }
+            },
+            "time" : {
+              "type" : "date",
+              "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+            },
+            "type" : {
+              "properties" : {
+                "@id" : {
+                  "type" : "long"
+                },
+                "@type" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "value" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "omero:series" : {
+      "type" : "long"
+    }
+  }
+}

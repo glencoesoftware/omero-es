@@ -1,0 +1,464 @@
+{
+  "_parent" : {
+    "type" : "plate"
+  },
+  "properties" : {
+    "@id" : {
+      "type" : "long"
+    },
+    "@type" : {
+      "type" : "text",
+      "fields" : {
+        "keyword" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        }
+      }
+    },
+    "Column" : {
+      "type" : "long"
+    },
+    "Row" : {
+      "type" : "long"
+    },
+    "WellSamples" : {
+      "properties" : {
+        "@id" : {
+          "type" : "long"
+        },
+        "@type" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "Image" : {
+          "properties" : {
+            "@id" : {
+              "type" : "long"
+            },
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "AcquisitionDate" : {
+              "type" : "date",
+              "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+            },
+            "Annotations" : {
+              "type" : "nested",
+              "properties" : {
+                "@id" : {
+                  "type" : "long"
+                },
+                "@type" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                }
+              }
+            },
+            "Description" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Name" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Pixels" : {
+              "properties" : {
+                "@id" : {
+                  "type" : "long"
+                },
+                "@type" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                },
+                "Channels" : {
+                  "type" : "nested",
+                  "properties" : {
+                    "@id" : {
+                      "type" : "long"
+                    },
+                    "@type" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Alpha" : {
+                      "type" : "long"
+                    },
+                    "Blue" : {
+                      "type" : "long"
+                    },
+                    "EmissionWavelength" : {
+                      "properties" : {
+                        "@type" : {
+                          "type" : "text",
+                          "fields" : {
+                            "keyword" : {
+                              "type" : "keyword",
+                              "ignore_above" : 256
+                            }
+                          }
+                        },
+                        "Symbol" : {
+                          "type" : "text",
+                          "fields" : {
+                            "keyword" : {
+                              "type" : "keyword",
+                              "ignore_above" : 256
+                            }
+                          }
+                        },
+                        "Unit" : {
+                          "type" : "text",
+                          "fields" : {
+                            "keyword" : {
+                              "type" : "keyword",
+                              "ignore_above" : 256
+                            }
+                          }
+                        },
+                        "Value" : {
+                          "type" : "float"
+                        }
+                      }
+                    },
+                    "ExcitationWavelength" : {
+                      "properties" : {
+                        "@type" : {
+                          "type" : "text",
+                          "fields" : {
+                            "keyword" : {
+                              "type" : "keyword",
+                              "ignore_above" : 256
+                            }
+                          }
+                        },
+                        "Symbol" : {
+                          "type" : "text",
+                          "fields" : {
+                            "keyword" : {
+                              "type" : "keyword",
+                              "ignore_above" : 256
+                            }
+                          }
+                        },
+                        "Unit" : {
+                          "type" : "text",
+                          "fields" : {
+                            "keyword" : {
+                              "type" : "keyword",
+                              "ignore_above" : 256
+                            }
+                          }
+                        },
+                        "Value" : {
+                          "type" : "float"
+                        }
+                      }
+                    },
+                    "Green" : {
+                      "type" : "long"
+                    },
+                    "NDFilter" : {
+                      "type" : "float"
+                    },
+                    "Name" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Red" : {
+                      "type" : "long"
+                    },
+                    "SamplesPerPixel" : {
+                      "type" : "long"
+                    },
+                    "omero:LogicalChannelId" : {
+                      "type" : "long"
+                    }
+                  }
+                },
+                "PhysicalSizeX" : {
+                  "properties" : {
+                    "@type" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Symbol" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Unit" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Value" : {
+                      "type" : "float"
+                    }
+                  }
+                },
+                "PhysicalSizeY" : {
+                  "properties" : {
+                    "@type" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Symbol" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Unit" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Value" : {
+                      "type" : "float"
+                    }
+                  }
+                },
+                "PhysicalSizeZ" : {
+                  "properties" : {
+                    "@type" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Symbol" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Unit" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Value" : {
+                      "type" : "float"
+                    }
+                  }
+                },
+                "SignificantBits" : {
+                  "type" : "long"
+                },
+                "SizeC" : {
+                  "type" : "long"
+                },
+                "SizeT" : {
+                  "type" : "long"
+                },
+                "SizeX" : {
+                  "type" : "long"
+                },
+                "SizeY" : {
+                  "type" : "long"
+                },
+                "SizeZ" : {
+                  "type" : "long"
+                },
+                "TimeIncrement" : {
+                  "properties" : {
+                    "@type" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Symbol" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Unit" : {
+                      "type" : "text",
+                      "fields" : {
+                        "keyword" : {
+                          "type" : "keyword",
+                          "ignore_above" : 256
+                        }
+                      }
+                    },
+                    "Value" : {
+                      "type" : "float"
+                    }
+                  }
+                },
+                "omero:sha1" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                }
+              }
+            },
+            "omero:archived" : {
+              "type" : "boolean"
+            },
+            "omero:series" : {
+              "type" : "long"
+            }
+          }
+        },
+        "PositionX" : {
+          "properties" : {
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Symbol" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Unit" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Value" : {
+              "type" : "float"
+            }
+          }
+        },
+        "PositionY" : {
+          "properties" : {
+            "@type" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Symbol" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Unit" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "Value" : {
+              "type" : "float"
+            }
+          }
+        }
+      }
+    }
+  }
+}
